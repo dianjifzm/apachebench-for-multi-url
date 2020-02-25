@@ -11,6 +11,10 @@ Multiple URL requests for ApacheBench. You can set URL list with '-L filename'.
 
 ```
 gcc -I /usr/include/apr-1.0 -I /usr/include/apache2 ab.c -o ab  -lm -lapr-1 -laprutil-1
+
+centos:
+    sudo yum install -y apr-devel apr-util-devel httpd-devel openssl-devel
+    gcc -I /usr/include/apr-1 -I /usr/include/httpd/ ab.c -o ab  -lm -lapr-1 -laprutil-1 -lssl -lcrypto
 ```
 
 ### Example Usage
